@@ -5,15 +5,15 @@ using UnityEngine;
 
 public class ClickDragScript : MonoBehaviour
 {
-    private GameObject heldObject;
+    private GameObject object1;
 
     private void FixedUpdate()
     {
-        if(heldObject != null)
+        if(object1 != null)
         {
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            pos.z = heldObject.transform.position.z;
-            heldObject.transform.position = pos;
+            pos.z = object1.transform.position.z;
+            object1.transform.position = pos;
         }
     }
     private void Update()
@@ -22,10 +22,10 @@ public class ClickDragScript : MonoBehaviour
         {
             GrabItem();
         }
-        if(Input.GetMouseButtonUp(0) && heldObject != null)
+        if(Input.GetMouseButtonUp(0) && object1 != null)
         {
-            heldObject.GetComponent<SpriteRenderer>().color = Color.white;
-            heldObject = null;
+            object1.GetComponent<SpriteRenderer>().color = Color.white;
+            object1 = null;
         }
     }
 
@@ -36,10 +36,10 @@ public class ClickDragScript : MonoBehaviour
         RaycastHit hit;
 
         if(Physics.Raycast(ray, out hit)) { 
-            if(hit.collider.CompareTag("Draggable"))
+            if(hit.collider.CompareTag("Drag"))
             {
-                heldObject = hit.collider.gameObject;
-                heldObject.GetComponent<SpriteRenderer>().color = Color.blue;
+                object1 = hit.collider.gameObject;
+                object1.GetComponent<SpriteRenderer>().color = Color.blue;
             }
         }
         
