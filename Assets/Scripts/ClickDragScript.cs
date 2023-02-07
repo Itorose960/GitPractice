@@ -6,7 +6,12 @@ using UnityEngine;
 
 public class ClickDragScript : MonoBehaviour
 {
+<<<<<<< HEAD
+    private GameObject object1;
+=======
+    public Sprite shrek;
     private GameObject heldObject;
+<<<<<<< HEAD
     List<Color> colours;
 
     private void Start()
@@ -20,26 +25,35 @@ public class ClickDragScript : MonoBehaviour
         colours.Add(Color.magenta);
         colours.Add(Color.yellow);
     }
+=======
+>>>>>>> 340975cc4faa8e26f30ca71243afe07f5bed6108
+>>>>>>> bde1b64cfa2f4e7271bc461afd12680b56f88351
 
     private void FixedUpdate()
     {
-        if(heldObject != null)
+        if(object1 != null)
         {
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            pos.z = heldObject.transform.position.z;
-            heldObject.transform.position = pos;
+            pos.z = object1.transform.position.z;
+            object1.transform.position = pos;
         }
     }
     private void Update()
     {
+        
         if(Input.GetMouseButtonDown(0))
         {
             GrabItem();
         }
-        if(Input.GetMouseButtonUp(0) && heldObject != null)
+        if(Input.GetMouseButtonUp(0) && object1 != null)
         {
-            heldObject.GetComponent<SpriteRenderer>().color = Color.white;
+<<<<<<< HEAD
+            object1.GetComponent<SpriteRenderer>().color = Color.white;
+            object1 = null;
+=======
+            heldObject.GetComponent<SpriteRenderer>().sprite = shrek;
             heldObject = null;
+>>>>>>> 340975cc4faa8e26f30ca71243afe07f5bed6108
         }
     }
 
@@ -50,11 +64,16 @@ public class ClickDragScript : MonoBehaviour
         RaycastHit hit;
 
         if(Physics.Raycast(ray, out hit)) { 
-            if(hit.collider.CompareTag("Draggable"))
+            if(hit.collider.CompareTag("Drug"))
             {
+<<<<<<< HEAD
                 heldObject = hit.collider.gameObject;
                 //heldObject.GetComponent<SpriteRenderer>().color = Color.blue;
                 heldObject.GetComponent<SpriteRenderer>().color = colours[UnityEngine.Random.Range(0, colours.Count)];
+=======
+                object1 = hit.collider.gameObject;
+                object1.GetComponent<SpriteRenderer>().color = Color.blue;
+>>>>>>> bde1b64cfa2f4e7271bc461afd12680b56f88351
             }
         }
         
