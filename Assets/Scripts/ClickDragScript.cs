@@ -6,6 +6,7 @@ using UnityEngine;
 public class ClickDragScript : MonoBehaviour
 {
     private GameObject heldObject;
+
     private void FixedUpdate()
     {
         if(heldObject != null)
@@ -23,6 +24,7 @@ public class ClickDragScript : MonoBehaviour
         }
         if(Input.GetMouseButtonUp(0))
         {
+            heldObject.GetComponent<SpriteRenderer>().color = Color.white;
             heldObject = null;
         }
     }
@@ -37,7 +39,9 @@ public class ClickDragScript : MonoBehaviour
             if(hit.collider.CompareTag("Draggable"))
             {
                 heldObject = hit.collider.gameObject;
+                heldObject.GetComponent<SpriteRenderer>().color = Color.blue;
             }
         }
+        
     }
 }
