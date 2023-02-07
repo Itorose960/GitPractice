@@ -251,6 +251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26a92ecbb7996c6489d1387192a7968a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shrek: {fileID: 21300000, guid: ae5bd4126a80ca34791c25b590bc30f7, type: 3}
 --- !u!4 &576091814
 Transform:
   m_ObjectHideFlags: 0
