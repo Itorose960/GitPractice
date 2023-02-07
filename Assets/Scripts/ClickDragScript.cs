@@ -3,9 +3,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ClickDragScript : MonoBehaviour
 {
     private GameObject heldObject;
+    List<Color> colours;
+
+    private void Start()
+    {
+        colours = new List<Color>();
+        colours.Add(Color.red);
+        colours.Add(Color.green);
+        colours.Add(Color.gray);
+        colours.Add(Color.white);
+        colours.Add(Color.cyan);
+        colours.Add(Color.magenta);
+        colours.Add(Color.yellow);
+    }
 
     private void FixedUpdate()
     {
@@ -39,7 +53,8 @@ public class ClickDragScript : MonoBehaviour
             if(hit.collider.CompareTag("Draggable"))
             {
                 heldObject = hit.collider.gameObject;
-                heldObject.GetComponent<SpriteRenderer>().color = Color.blue;
+                //heldObject.GetComponent<SpriteRenderer>().color = Color.blue;
+                heldObject.GetComponent<SpriteRenderer>().color = colours[UnityEngine.Random.Range(0, colours.Count)];
             }
         }
         
