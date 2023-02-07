@@ -36,7 +36,7 @@ public class ClickDragScript : MonoBehaviour
         RaycastHit hit;
 
         if(Physics.Raycast(ray, out hit)) { 
-            if(hit.collider.CompareTag("Drag"))
+            if(hit.collider.CompareTag("Drug"))
             {
                 object1 = hit.collider.gameObject;
                 object1.GetComponent<SpriteRenderer>().color = Color.blue;
