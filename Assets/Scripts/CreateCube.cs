@@ -8,7 +8,7 @@ public class CreateCube : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetMouseButtonDown(1))
+        if(Input.GetKeyDown(KeyCode.E))
         {
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             pos.z = 0;
