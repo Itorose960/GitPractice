@@ -22,7 +22,7 @@ public class ClickDragScript : MonoBehaviour
         {
             GrabItem();
         }
-        if(Input.GetMouseButtonUp(0))
+        if(Input.GetMouseButtonUp(0) && heldObject != null)
         {
             heldObject.GetComponent<SpriteRenderer>().color = Color.white;
             heldObject = null;
