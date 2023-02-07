@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ClickDragScript : MonoBehaviour
 {
+    public Sprite shrek;
     private GameObject heldObject;
 
     private void FixedUpdate()
@@ -18,13 +19,14 @@ public class ClickDragScript : MonoBehaviour
     }
     private void Update()
     {
+        
         if(Input.GetMouseButtonDown(0))
         {
             GrabItem();
         }
         if(Input.GetMouseButtonUp(0) && heldObject != null)
         {
-            heldObject.GetComponent<SpriteRenderer>().color = Color.white;
+            heldObject.GetComponent<SpriteRenderer>().sprite = shrek;
             heldObject = null;
         }
     }
