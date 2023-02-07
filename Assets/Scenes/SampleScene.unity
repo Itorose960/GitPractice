@@ -360,8 +360,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-=======
 --- !u!1 &1148902666
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,4 +809,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1d7415584dfe3418da82f80d5ba57d, type: 3}
->>>>>>> 25984cbf36b3acf82353591eae3801da54f063cc

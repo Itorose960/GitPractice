@@ -6,12 +6,9 @@ using UnityEngine;
 
 public class ClickDragScript : MonoBehaviour
 {
-<<<<<<< HEAD
-    private GameObject object1;
-=======
+
     public Sprite shrek;
     private GameObject heldObject;
-<<<<<<< HEAD
     List<Color> colours;
 
     private void Start()
@@ -25,17 +22,14 @@ public class ClickDragScript : MonoBehaviour
         colours.Add(Color.magenta);
         colours.Add(Color.yellow);
     }
-=======
->>>>>>> 340975cc4faa8e26f30ca71243afe07f5bed6108
->>>>>>> bde1b64cfa2f4e7271bc461afd12680b56f88351
 
     private void FixedUpdate()
     {
-        if(object1 != null)
+        if(heldObject != null)
         {
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            pos.z = object1.transform.position.z;
-            object1.transform.position = pos;
+            pos.z = heldObject.transform.position.z;
+            heldObject.transform.position = pos;
         }
     }
     private void Update()
@@ -45,15 +39,10 @@ public class ClickDragScript : MonoBehaviour
         {
             GrabItem();
         }
-        if(Input.GetMouseButtonUp(0) && object1 != null)
+        if(Input.GetMouseButtonUp(0) && heldObject != null)
         {
-<<<<<<< HEAD
-            object1.GetComponent<SpriteRenderer>().color = Color.white;
-            object1 = null;
-=======
             heldObject.GetComponent<SpriteRenderer>().sprite = shrek;
             heldObject = null;
->>>>>>> 340975cc4faa8e26f30ca71243afe07f5bed6108
         }
     }
 
@@ -66,14 +55,9 @@ public class ClickDragScript : MonoBehaviour
         if(Physics.Raycast(ray, out hit)) { 
             if(hit.collider.CompareTag("Drug"))
             {
-<<<<<<< HEAD
                 heldObject = hit.collider.gameObject;
                 //heldObject.GetComponent<SpriteRenderer>().color = Color.blue;
                 heldObject.GetComponent<SpriteRenderer>().color = colours[UnityEngine.Random.Range(0, colours.Count)];
-=======
-                object1 = hit.collider.gameObject;
-                object1.GetComponent<SpriteRenderer>().color = Color.blue;
->>>>>>> bde1b64cfa2f4e7271bc461afd12680b56f88351
             }
         }
         
