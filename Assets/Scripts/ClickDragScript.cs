@@ -9,7 +9,7 @@ public class ClickDragScript : MonoBehaviour
 
     public Sprite shrek;
     private GameObject heldObject;
-    List<Color> colours;
+    public static List<Color> colours;
 
     private void Start()
     {
@@ -41,7 +41,7 @@ public class ClickDragScript : MonoBehaviour
         }
         if(Input.GetMouseButtonUp(0) && heldObject != null)
         {
-            heldObject.GetComponent<SpriteRenderer>().sprite = shrek;
+            heldObject.GetComponent<SpriteRenderer>().sprite = catWBoots; //M: changes sprite again
             heldObject = null;
         }
     }
@@ -53,7 +53,7 @@ public class ClickDragScript : MonoBehaviour
         RaycastHit hit;
 
         if(Physics.Raycast(ray, out hit)) { 
-            if(hit.collider.CompareTag("Drug"))
+            if(hit.collider.CompareTag("Drag")) //M: changes the tag to compares
             {
                 heldObject = hit.collider.gameObject;
                 //heldObject.GetComponent<SpriteRenderer>().color = Color.blue;

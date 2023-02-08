@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1989095548545724615
+--- !u!1 &7365226292440098790
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1989095548545724618}
-  - component: {fileID: 1989095548545724617}
-  - component: {fileID: 1989095548545724619}
+  - component: {fileID: 8269305700206219359}
+  - component: {fileID: 7913168914390715960}
+  - component: {fileID: 5513159677634197795}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Draggable
@@ -18,28 +18,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1989095548545724618
+--- !u!4 &8269305700206219359
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1989095548545724615}
+  m_GameObject: {fileID: 7365226292440098790}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 8.14, y: 1.92, z: 0}
   m_LocalScale: {x: 0.5227, y: 0.5227, z: 0.5227}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1989095548545724617
+--- !u!212 &7913168914390715960
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1989095548545724615}
+  m_GameObject: {fileID: 7365226292440098790}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -53,7 +53,11 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+<<<<<<< Updated upstream:Assets/Prefab/Sprite.prefab
   - {fileID: 2100000, guid: 2fbfa7a5d5ad3f145824e3f1ec1c1837, type: 2}
+=======
+  - {fileID: 2100000, guid: 80cbb247a60d5114e91d90c9c29ccff1, type: 2}
+>>>>>>> Stashed changes:Assets/Prefabricados/Sprite.prefab
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,13 +89,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!65 &1989095548545724619
+--- !u!65 &5513159677634197795
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1989095548545724615}
+  m_GameObject: {fileID: 7365226292440098790}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
