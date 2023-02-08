@@ -8,11 +8,13 @@ public class CreateCube : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E))
+        if(Input.GetKeyDown(KeyCode.Space))
         {
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             pos.z = 0;
             Instantiate(thing, pos, Quaternion.identity);
+
+            Debug.Log("Marga was here.");
         }
     }
 }
