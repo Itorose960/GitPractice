@@ -8,6 +8,7 @@ public class ClickDragScript : MonoBehaviour
 {
 
     public Sprite shrek;
+    public Sprite catWBoots;
     private GameObject heldObject;
     List<Color> colours;
 
@@ -21,6 +22,7 @@ public class ClickDragScript : MonoBehaviour
         colours.Add(Color.cyan);
         colours.Add(Color.magenta);
         colours.Add(Color.yellow);
+        colours.Add(Color.black);
     }
 
     private void FixedUpdate()
