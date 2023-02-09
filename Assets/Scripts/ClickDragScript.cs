@@ -10,7 +10,7 @@ public class ClickDragScript : MonoBehaviour
     public Sprite shrek;
     public Sprite catWBoots;
     private GameObject heldObject;
-    List<Color> colours;
+    List<Color> colouris;
 
     private void Start()
     {
